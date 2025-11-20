@@ -60,9 +60,11 @@
   </div>
   <script type="module">
     import { WidgetPage } from "../js/WidgetPage.js";
+    import {VariableWidget} from "../js/VariableWidget.js"
 
     document.addEventListener("DOMContentLoaded", () => {
       const widgetPage = new WidgetPage("widget-page-template", document.body);
+      widgetPage.registerWidget(".variable-widget",VariableWidget)
     });
   </script>
 </body>
