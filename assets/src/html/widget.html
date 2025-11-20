@@ -1,78 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <!-- Metadata -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Page Title</title>
 
-<head>
-  <!-- Metadata -->
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Page Title</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;1,400;1,600&display=swap"
+      rel="stylesheet"
+    />
 
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;1,400;1,600&display=swap"
-    rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/widget-page.css" />
+    <link rel="stylesheet" href="../css/variable-widget.css" />
+  </head>
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="../css/widget-page.css">
-  <link rel="stylesheet" href="../css/variable-widget.css">
-</head>
+  <body>
+    <div class="column column-md">
+      <!--Section 1-->
+      <section>
+        <div class="text">
+          <h1>What Is a Variable?</h1>
+          <p>
+            A <strong>variable</strong> is like a box that can store a value. We
+            can open the box, change what’s inside, and use it again later!
+          </p>
+        </div>
 
-<body>
-  <div class="column column-md">
-    <!--Section 1-->
-    <section>
-      <div class="text">
-        <h1>What Is a Variable?</h1>
-        <p>A <strong>variable</strong> is like a box that can store a value.  
-        We can open the box, change what’s inside, and use it again later!</p>
-      </div>
-
-      <button class="button-semantic button-primary button-continue">
-        <span class="button-text">Continue</span>
-      </button>
-    </section>
+        <button class="button-semantic button-primary button-continue">
+          <span class="button-text">Continue</span>
+        </button>
+      </section>
 
       <!-- SECTION 2 -->
-    <section>
-      <div class="text">
-        <h2>Try It Yourself!</h2>
-        <p>Below is a small widget.  
-        Click the button to change the value stored in the variable.</p>
-      </div>
-
-      <!-- WIDGET -->
-      <div class="widget variable-widget">
-        <div class="variable-box">
-          <p class="label">Current Value:</p>
-          <p class="value-display">0</p>
+      <section>
+        <div class="text">
+          <h2>Try It Yourself!</h2>
+          <p>
+            Below is a small widget. Click the button to change the value stored
+            in the variable.
+          </p>
         </div>
-        <button class="change-value-btn">Change Value</button>
-      </div>
 
-      <button class="button-semantic button-primary button-continue">
-        <span class="button-text">Continue</span>
-      </button>
-    </section>
+        <!-- WIDGET -->
+        <div class="widget variable-widget">
+          <div class="variable-box">
+            <p class="label">Current Value:</p>
+            <p class="value-display">0</p>
+          </div>
+          <button class="change-value-btn">Change Value</button>
+        </div>
 
-     <!-- SECTION 3 -->
-    <section>
-      <div class="text">
-        <h2>What Happened?</h2>
-        <p>Each time you pressed the button, the variable stored a new value. </p>
-      </div>
-    </section>
+        <button class="button-semantic button-primary button-continue">
+          <span class="button-text">Continue</span>
+        </button>
+      </section>
 
-  </div>
-  <script type="module">
-    import { WidgetPage } from "../js/WidgetPage.js";
-    import {VariableWidget} from "../js/VariableWidget.js"
+      <!-- SECTION 3 -->
+      <section>
+        <div class="text">
+          <h2>What Happened?</h2>
+          <p>
+            Each time you pressed the button, the variable stored a new value.
+          </p>
+        </div>
+      </section>
+    </div>
+    <script type="module">
+      import { WidgetPage } from "../js/WidgetPage.js";
+      import { VariableWidget } from "../js/VariableWidget.js";
 
-    document.addEventListener("DOMContentLoaded", () => {
-      const widgetPage = new WidgetPage("widget-page-template", document.body);
-      widgetPage.registerWidget(".variable-widget",VariableWidget)
-    });
-  </script>
-</body>
-
+      document.addEventListener("DOMContentLoaded", () => {
+        const widgetPage = new WidgetPage(
+          "widget-page-template",
+          document.body
+        );
+        widgetPage.registerWidget(".variable-widget", VariableWidget);
+      });
+    </script>
+  </body>
 </html>

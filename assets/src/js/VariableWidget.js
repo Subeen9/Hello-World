@@ -1,8 +1,8 @@
 import { Widget } from "./Widget.js";
 
 export class VariableWidget extends Widget {
-  constructor(container,page) {
-    super(container,page);
+  constructor(container, page) {
+    super(container, page);
 
     this.valueDisplay = this.container.querySelector(".value-display");
     this.button = this.container.querySelector(".change-value-btn");
