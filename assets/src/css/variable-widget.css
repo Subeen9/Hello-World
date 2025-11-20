@@ -3,3 +3,35 @@
   text-align: center;
   font-family: Poppins, sans-serif;
 }
+.variable-box {
+  border: 2px solid #4a66ff;
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 15px;
+  background: #eef0ff;
+}
+
+.value-display {
+  font-size: 32px;
+  font-weight: bold;
+  margin: 5px 0;
+  transition: transform 0.2s ease;
+}
+
+.value-display.flash {
+  transform: scale(1.2);
+}
+
+.change-value-btn {
+  background: #4a66ff;
+  color: white;
+  padding: 10px 14px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.change-value-btn:hover {
+  background: #364bd8;
+}
